@@ -6,9 +6,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - UI Components
+    @IBOutlet weak var appearanceButton: UIButton!
+    
+    // MARK: - Supporting Properties
+    var isDarkMode: Bool = false
+    let whiteAppearanceMoonIcon = #imageLiteral(resourceName: "Moon")
+    let darkAppearanceSunIcon = #imageLiteral(resourceName: "Sun")
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .orange
+    }
+    @IBAction func appearanceButtonTapped(_ sender: UIButton) {
+        //TODO: - Change Icon
+        isDarkMode = !isDarkMode
+        if isDarkMode { sender.setImage(whiteAppearanceMoonIcon, for: .normal) }
+        else { sender.setImage(darkAppearanceSunIcon, for: .normal) }
     }
 }
 
