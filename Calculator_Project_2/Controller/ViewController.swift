@@ -8,7 +8,8 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - UI Components
-    @IBOutlet weak var appearanceButton: UIButton!
+    @IBOutlet weak var tappedButtonsTextView: UITextView!
+    @IBOutlet weak var calculatedAnswerTextView: UITextView!
     
     // MARK: - Supporting Properties
     var isDarkMode: Bool = false
@@ -19,13 +20,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
     }
     @IBAction func appearanceButtonTapped(_ sender: UIButton) {
         //TODO: - Change Icon
         isDarkMode = !isDarkMode
         if isDarkMode { sender.setImage(whiteAppearanceMoonIcon, for: .normal) }
         else { sender.setImage(darkAppearanceSunIcon, for: .normal) }
+    }
+    
+    
+    @IBAction func calculaterButtons(_ sender: UIButton) {
+        print(sender.tag)
+        
     }
 }
 
