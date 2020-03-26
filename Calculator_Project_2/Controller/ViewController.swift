@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     
     // MARK: - Supporting Properties
     var isDarkMode: Bool = false
-    let whiteAppearanceMoonIcon = #imageLiteral(resourceName: "Moon")
-    let darkAppearanceSunIcon = #imageLiteral(resourceName: "Sun")
+    let whiteAppearanceMoonIcon = #imageLiteral(resourceName: "moon")
+    let darkAppearanceSunIcon = #imageLiteral(resourceName: "sun")
 
     
 
