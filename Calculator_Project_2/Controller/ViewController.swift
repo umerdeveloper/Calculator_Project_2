@@ -9,9 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-//    override var preferredStatusBarStyle : UIStatusBarStyle {
-//        return .lightContent  // or.lightContent
-//    }
+    // MARK: - Logic Supporting Properties
+    var numberOnScreen: Double = 0.0
+    var previousNumber: Double = 0
+    var operation: Double = 0.0
+    var isPerfromingOperation: Bool = false
+    
+    
+    
     
     // MARK: - UI Components
     @IBOutlet weak var tappedButtonsTextView: UITextView!
