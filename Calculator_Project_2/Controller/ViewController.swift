@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func calculaterButtons(_ sender: UIButton) {
-        print(sender.tag)
+       
         
     }
 }

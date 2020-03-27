@@ -243,7 +243,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
-                                <state key="normal" image="divide" catalog="system">
+                                <state key="normal" title="/">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
@@ -278,7 +278,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
-                                <state key="normal" image="minus" catalog="system">
+                                <state key="normal" title="-">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
@@ -296,7 +296,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
-                                <state key="normal" image="plus" catalog="system">
+                                <state key="normal" title="+">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
@@ -314,7 +314,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteGB_equal_red"/>
                                 <color key="tintColor" name="whiteBG_equal_text_color"/>
-                                <state key="normal" image="equal" catalog="system">
+                                <state key="normal" title="=">
                                     <color key="titleColor" name="whiteBG_equal_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
@@ -386,11 +386,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="divide" catalog="system" width="128" height="103"/>
-        <image name="equal" catalog="system" width="128" height="72"/>
-        <image name="minus" catalog="system" width="128" height="24"/>
         <image name="moon" width="133" height="133"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="output_text_color">
             <color red="0.28627452254295349" green="0.29019609093666077" blue="0.29411765933036804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
