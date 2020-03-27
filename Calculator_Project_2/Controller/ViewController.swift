@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+//    override var preferredStatusBarStyle : UIStatusBarStyle {
+//        return .lightContent  // or.lightContent
+//    }
+    
     // MARK: - UI Components
     @IBOutlet weak var tappedButtonsTextView: UITextView!
     @IBOutlet weak var calculatedAnswerTextView: UITextView!
@@ -24,14 +28,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     @IBAction func appearanceButtonTapped(_ sender: UIButton) {
         //TODO: - Change Icon
         isDarkMode = !isDarkMode
-        if isDarkMode && sender.tag == 19 {
+        
+        if !isDarkMode && sender.tag == 19 {
             sender.setImage(whiteAppearanceMoonIcon, for: .normal)
             // set view white
             view.backgroundColor = .white
+            UIApplication.shared.statusBarStyle = .default
             
             // answer textView color
             calculatedAnswerTextView.textColor = UIColor(named: "output_text_color")
@@ -63,9 +70,13 @@ class ViewController: UIViewController {
                 }
             }
         }
-        else if !isDarkMode && sender.tag == 19 {
+        else if isDarkMode && sender.tag == 19 {
             sender.setImage(darkAppearanceSunIcon, for: .normal)
             view.backgroundColor = .black
+            //setNeedsStatusBarAppearanceUpdate()
+            UIApplication.shared.statusBarStyle = .lightContent
+            
+            
             
             // answer textView Color
             calculatedAnswerTextView.backgroundColor = .black
@@ -101,6 +112,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func numbersTapped(_ sender: UIButton) {
+        
+        
+        
+        
        
         
     }
