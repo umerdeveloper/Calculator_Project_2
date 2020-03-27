@@ -344,7 +344,7 @@
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KK-pY-hqN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="90 + 45 * 10" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-pL-R78">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="90 + 45 * 10" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-pL-R78">
                                 <rect key="frame" x="43" y="140" width="328" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -352,7 +352,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="900" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-R2-HR6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="900" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-R2-HR6">
                                 <rect key="frame" x="43" y="202" width="328" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
