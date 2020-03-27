@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func calculaterButtons(_ sender: UIButton) {
+    @IBAction func numbersTapped(_ sender: UIButton) {
        
         
     }
