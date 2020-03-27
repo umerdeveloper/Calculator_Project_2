@@ -5,5 +5,6 @@
 4. using tag all buttons with different colors
 5. appearance button change icon on click
 6. statusBar color change appearance color of app light / dark
+7. alert controller to avoid operation buttons select before numbers
 
 
