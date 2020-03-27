@@ -31,316 +31,32 @@
                                     <action selector="appearanceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PII-hu-9sL"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3 + 2 - 1" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-pL-R78">
-                                <rect key="frame" x="43" y="139" width="333" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" name="tappedtext_color"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="786" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-R2-HR6">
-                                <rect key="frame" x="43" y="201" width="333" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" name="output_text_color"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MmV-4s-T9r">
-                                <rect key="frame" x="43" y="329" width="160" height="49"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M5r-Qa-8Js">
+                                <rect key="frame" x="43" y="100" width="333" height="672"/>
                                 <subviews>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-LG-1EZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="49"/>
-                                        <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="C">
-                                            <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDz-HZ-nEV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-ug-MPx" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="43" y="0.0" width="31" height="49"/>
-                                        <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="+/-">
-                                            <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Um0-95-6M7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-0p-jgP" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="86" y="0.0" width="31" height="49"/>
-                                        <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="%">
-                                            <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJH-2t-MN6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Pp-avI" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="129" y="0.0" width="31" height="49"/>
-                                        <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
-                                        <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
-                                        <state key="normal" title="/">
-                                            <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BRo-oc-Y0T"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Go3-BC-QaY">
-                                <rect key="frame" x="43" y="406" width="156" height="43"/>
-                                <subviews>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-5P-VVM" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="43"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="7">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DS-z0-7EY"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-Hn-VSS" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="42" y="0.0" width="30" height="43"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="8">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVV-3h-dzc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv2-qV-hbb" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="0.0" width="30" height="43"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="9">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIa-jQ-Ycv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-J2-6gG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="126" y="0.0" width="30" height="43"/>
-                                        <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZf-tK-f6v"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pd7-E2-Cyj">
-                                <rect key="frame" x="43" y="486" width="156" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-dF-Qql" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="4">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYM-sF-xNI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-B6-98f" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="42" y="0.0" width="30" height="60"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="5">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMD-pm-Oqr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-e7-VcZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="0.0" width="30" height="60"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="6">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nU-4n-svB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-n0-T3t" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="126" y="0.0" width="30" height="60"/>
-                                        <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
-                                        <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyo-V0-4SG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QND-vS-K1v">
-                                <rect key="frame" x="43" y="564" width="156" height="55"/>
-                                <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-4a-T0T" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="55"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="1">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lor-Oi-pFZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-5m-b6s" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="42" y="0.0" width="30" height="55"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="2">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHe-2U-MJw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-JU-drG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="0.0" width="30" height="55"/>
-                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="3">
-                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88H-DR-1Ak"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-yO-Je2" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                        <rect key="frame" x="126" y="0.0" width="30" height="55"/>
-                                        <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="31"/>
-                                        <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvr-TP-pzH"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PpW-2A-mjh">
-                                <rect key="frame" x="43" y="642" width="156" height="53"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MIU-1x-JWh">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="53"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="3 + 2 - 1" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-pL-R78">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="83"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" name="tappedtext_color"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="786" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-R2-HR6">
+                                        <rect key="frame" x="0.0" y="98" width="333" height="83.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" name="output_text_color"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="45"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MmV-4s-T9r">
+                                        <rect key="frame" x="0.0" y="196.33333333333331" width="333" height="83"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-5U-Mk9" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="72" height="53"/>
-                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                                <state key="normal" title="0">
-                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-LG-1EZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -348,20 +64,15 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KK-pY-hqN"/>
+                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDz-HZ-nEV"/>
                                                 </connections>
                                             </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-x9-7PW">
-                                        <rect key="frame" x="84" y="0.0" width="72" height="53"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ch-Zng" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="53"/>
-                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-ug-MPx" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="86.333333333333343" y="0.0" width="74.333333333333343" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
-                                                <state key="normal" title=".">
-                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                <state key="normal" title="+/-">
+                                                    <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -369,16 +80,32 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEa-o6-wqh"/>
+                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Um0-95-6M7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-Wt-D64" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
-                                                <rect key="frame" x="42" y="0.0" width="30" height="53"/>
-                                                <color key="backgroundColor" name="whiteGB_equal_red"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
-                                                <color key="tintColor" name="whiteBG_equal_text_color"/>
-                                                <state key="normal" title="=">
-                                                    <color key="titleColor" name="whiteBG_equal_text_color"/>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-0p-jgP" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="172.66666666666666" y="0.0" width="74" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJH-2t-MN6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Pp-avI" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="258.66666666666669" y="0.0" width="74.333333333333314" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
+                                                <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -387,9 +114,285 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0er-Q9-5wb"/>
+                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BRo-oc-Y0T"/>
                                                 </connections>
                                             </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Go3-BC-QaY">
+                                        <rect key="frame" x="0.0" y="294.33333333333331" width="333" height="83.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-5P-VVM" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DS-z0-7EY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-Hn-VSS" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="86.333333333333343" y="0.0" width="74.333333333333343" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVV-3h-dzc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv2-qV-hbb" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="172.66666666666666" y="0.0" width="74" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIa-jQ-Ycv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-J2-6gG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="258.66666666666669" y="0.0" width="74.333333333333314" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZf-tK-f6v"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pd7-E2-Cyj">
+                                        <rect key="frame" x="0.0" y="392.66666666666669" width="333" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-dF-Qql" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYM-sF-xNI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-B6-98f" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="86.333333333333343" y="0.0" width="74.333333333333343" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMD-pm-Oqr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-e7-VcZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="172.66666666666666" y="0.0" width="74" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nU-4n-svB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-n0-T3t" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="258.66666666666669" y="0.0" width="74.333333333333314" height="83"/>
+                                                <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                                <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyo-V0-4SG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QND-vS-K1v">
+                                        <rect key="frame" x="0.0" y="490.66666666666657" width="333" height="83.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-4a-T0T" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lor-Oi-pFZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-5m-b6s" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="86.333333333333343" y="0.0" width="74.333333333333343" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHe-2U-MJw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-JU-drG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="172.66666666666666" y="0.0" width="74" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88H-DR-1Ak"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-yO-Je2" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                <rect key="frame" x="258.66666666666669" y="0.0" width="74.333333333333314" height="83.333333333333329"/>
+                                                <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="31"/>
+                                                <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvr-TP-pzH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PpW-2A-mjh">
+                                        <rect key="frame" x="0.0" y="589" width="333" height="83"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MIU-1x-JWh">
+                                                <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="83"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-5U-Mk9" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="83"/>
+                                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KK-pY-hqN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-x9-7PW">
+                                                <rect key="frame" x="172.66666666666663" y="0.0" width="160.33333333333337" height="83"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ch-Zng" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="83"/>
+                                                        <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEa-o6-wqh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-Wt-D64" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                                                        <rect key="frame" x="86.000000000000028" y="0.0" width="74.333333333333343" height="83"/>
+                                                        <color key="backgroundColor" name="whiteGB_equal_red"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                                        <color key="tintColor" name="whiteBG_equal_text_color"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" name="whiteBG_equal_text_color"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0er-Q9-5wb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -398,28 +401,32 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ejb-WN-X3o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="AmP-aO-UbV"/>
+                            <constraint firstItem="M5r-Qa-8Js" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="JcT-Kn-46N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ejb-WN-X3o" secondAttribute="trailing" constant="20" id="bP0-9x-7Ut"/>
+                            <constraint firstItem="M5r-Qa-8Js" firstAttribute="top" secondItem="Ejb-WN-X3o" secondAttribute="bottom" constant="8" symbolic="YES" id="dOl-LM-0vD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M5r-Qa-8Js" secondAttribute="trailing" constant="38" id="kCE-hj-lQc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M5r-Qa-8Js" secondAttribute="bottom" constant="90" id="zFr-Kg-JC1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="calculatedAnswerTextView" destination="qTv-R2-HR6" id="QFG-ef-toN"/>
                         <outlet property="tappedButtonsTextView" destination="8gb-pL-R78" id="ezh-qZ-eJq"/>
-                        <outletCollection property="allButtons" destination="FNg-LG-1EZ" collectionClass="NSMutableArray" id="OOb-BD-7ob"/>
                         <outletCollection property="allButtons" destination="hBX-ug-MPx" collectionClass="NSMutableArray" id="x1N-5g-Ko9"/>
-                        <outletCollection property="allButtons" destination="TYK-0p-jgP" collectionClass="NSMutableArray" id="jFV-Fr-gqs"/>
                         <outletCollection property="allButtons" destination="N08-Pp-avI" collectionClass="NSMutableArray" id="Hk8-HW-ySU"/>
-                        <outletCollection property="allButtons" destination="9aE-5P-VVM" collectionClass="NSMutableArray" id="Zxh-1l-v3Q"/>
-                        <outletCollection property="allButtons" destination="ukq-Hn-VSS" collectionClass="NSMutableArray" id="WK9-NW-9gg"/>
+                        <outletCollection property="allButtons" destination="FNg-LG-1EZ" collectionClass="NSMutableArray" id="OOb-BD-7ob"/>
+                        <outletCollection property="allButtons" destination="TYK-0p-jgP" collectionClass="NSMutableArray" id="jFV-Fr-gqs"/>
                         <outletCollection property="allButtons" destination="Mv2-qV-hbb" collectionClass="NSMutableArray" id="o7y-tg-Law"/>
                         <outletCollection property="allButtons" destination="Hi5-J2-6gG" collectionClass="NSMutableArray" id="YWp-0i-8wc"/>
-                        <outletCollection property="allButtons" destination="gJI-dF-Qql" collectionClass="NSMutableArray" id="eQy-Sv-J2u"/>
-                        <outletCollection property="allButtons" destination="yDp-B6-98f" collectionClass="NSMutableArray" id="oj8-Ka-hUm"/>
+                        <outletCollection property="allButtons" destination="9aE-5P-VVM" collectionClass="NSMutableArray" id="Zxh-1l-v3Q"/>
+                        <outletCollection property="allButtons" destination="ukq-Hn-VSS" collectionClass="NSMutableArray" id="WK9-NW-9gg"/>
                         <outletCollection property="allButtons" destination="S5e-e7-VcZ" collectionClass="NSMutableArray" id="aBz-RR-yfL"/>
+                        <outletCollection property="allButtons" destination="gJI-dF-Qql" collectionClass="NSMutableArray" id="eQy-Sv-J2u"/>
                         <outletCollection property="allButtons" destination="EFa-n0-T3t" collectionClass="NSMutableArray" id="VYz-2i-Hrn"/>
-                        <outletCollection property="allButtons" destination="f7W-4a-T0T" collectionClass="NSMutableArray" id="fLc-oM-D7I"/>
-                        <outletCollection property="allButtons" destination="TYl-5m-b6s" collectionClass="NSMutableArray" id="sAH-XR-9TD"/>
+                        <outletCollection property="allButtons" destination="yDp-B6-98f" collectionClass="NSMutableArray" id="oj8-Ka-hUm"/>
                         <outletCollection property="allButtons" destination="d1Y-JU-drG" collectionClass="NSMutableArray" id="QMA-xI-fCc"/>
+                        <outletCollection property="allButtons" destination="TYl-5m-b6s" collectionClass="NSMutableArray" id="sAH-XR-9TD"/>
+                        <outletCollection property="allButtons" destination="f7W-4a-T0T" collectionClass="NSMutableArray" id="fLc-oM-D7I"/>
                         <outletCollection property="allButtons" destination="Afd-yO-Je2" collectionClass="NSMutableArray" id="Aav-6G-ZQ2"/>
                         <outletCollection property="allButtons" destination="jJI-5U-Mk9" collectionClass="NSMutableArray" id="AeA-Dk-zEf"/>
                         <outletCollection property="allButtons" destination="ybb-Wt-D64" collectionClass="NSMutableArray" id="bTw-Fq-0eP"/>
