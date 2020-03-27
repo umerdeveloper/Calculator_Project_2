@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     // MARK: - UI Components
     @IBOutlet weak var tappedButtonsTextView: UITextView!
     @IBOutlet weak var calculatedAnswerTextView: UITextView!
+    @IBOutlet var customButton: [UIButton]!
+    
     
     // MARK: - Supporting Properties
     var isDarkMode: Bool = false
@@ -25,7 +27,6 @@ class ViewController: UIViewController {
     }
     @IBAction func appearanceButtonTapped(_ sender: UIButton) {
         //TODO: - Change Icon
-        print(sender.tag)
         isDarkMode = !isDarkMode
         if isDarkMode && sender.tag == 19 {
             sender.setImage(whiteAppearanceMoonIcon, for: .normal)
@@ -45,7 +46,6 @@ class ViewController: UIViewController {
             tappedButtonsTextView.textColor = UIColor(named: "blackBG_tapped_text_color")
             
             // equal button color
-            
             
             
         }
