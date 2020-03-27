@@ -43,7 +43,6 @@
 		CB113485242CCE95001860E8 = {
 			isa = PBXGroup;
 			children = (
-				CB1134A6242CD392001860E8 /* README.md */,
 				CB113490242CCE95001860E8 /* Calculator_Project_2 */,
 				CB11348F242CCE95001860E8 /* Products */,
 			);
@@ -60,6 +59,7 @@
 		CB113490242CCE95001860E8 /* Calculator_Project_2 */ = {
 			isa = PBXGroup;
 			children = (
+				CB1134A6242CD392001860E8 /* README.md */,
 				CBCE9087242D996200DE868F /* Extensions */,
 				CB1134A9242CD40E001860E8 /* Controller */,
 				CB1134A8242CD408001860E8 /* View */,
