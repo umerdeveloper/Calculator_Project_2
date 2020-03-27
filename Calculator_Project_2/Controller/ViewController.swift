@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     // MARK: - UI Components
     @IBOutlet weak var tappedButtonsTextView: UITextView!
     @IBOutlet weak var calculatedAnswerTextView: UITextView!
-    @IBOutlet var customButton: [UIButton]!
+    @IBOutlet var allButtons: [UIButton]!
     
     
     // MARK: - Supporting Properties
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             tappedButtonsTextView.backgroundColor = .white
             
             //MARK: - Buttons color for whiteBG
-            for button in customButton {
+            for button in allButtons {
                 //TODO: = color change
                 switch button.tag {
                     case 0...9:
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
             tappedButtonsTextView.textColor = UIColor(named: "blackBG_tapped_text_color")
             
             //MARK: - Buttons Color for DarkMode
-            for button in customButton {
+            for button in allButtons {
                 //TODO: = color change
                 switch button.tag {
                     case 0...9:
@@ -104,5 +104,9 @@ class ViewController: UIViewController {
        
         
     }
+    @IBAction func operationsButtonsTapped(_ sender: UIButton) {
+        
+    }
+    
 }
 
