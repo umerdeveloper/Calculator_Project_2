@@ -242,6 +242,7 @@
                                 <rect key="frame" x="301" y="357" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
                                 <state key="normal" title="/">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
@@ -277,6 +278,7 @@
                                 <rect key="frame" x="301" y="514" width="70" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
                                 <state key="normal" title="-">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
@@ -295,6 +297,7 @@
                                 <rect key="frame" x="301" y="587" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
@@ -313,6 +316,7 @@
                                 <rect key="frame" x="301" y="665" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteGB_equal_red"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" name="whiteBG_equal_text_color"/>
                                 <state key="normal" title="=">
                                     <color key="titleColor" name="whiteBG_equal_text_color"/>
