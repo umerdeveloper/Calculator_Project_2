@@ -56,15 +56,15 @@ class ViewController: UIViewController {
             sender.tag != 10 && // empty
             sender.tag != 17 { // result
             // %
-            if sender.tag == 12 { tappedButtonsTextView.text = "%" }
+            if sender.tag == 12 { tappedButtonsTextView.text += "%" }
             // /
-            if sender.tag == 13 { tappedButtonsTextView.text = "/" }
+            if sender.tag == 13 { tappedButtonsTextView.text += "/" }
             // X
-            if sender.tag == 14 { tappedButtonsTextView.text = "X" }
+            if sender.tag == 14 { tappedButtonsTextView.text += "X" }
             // -
-            if sender.tag == 15 { tappedButtonsTextView.text = "-" }
+            if sender.tag == 15 { tappedButtonsTextView.text += "-" }
             // +
-            if sender.tag == 16 { tappedButtonsTextView.text = "+" }
+            if sender.tag == 16 { tappedButtonsTextView.text += "+" }
             
             operation = sender.tag
             isPerfromingOperation = true
