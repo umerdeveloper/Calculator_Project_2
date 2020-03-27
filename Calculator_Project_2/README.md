@@ -4,5 +4,6 @@
 3. textViews are not editable
 4. using tag all buttons with different colors
 5. appearance button change icon on click
-6. 
+6. statusBar color change appearance color of app light / dark
+
 
