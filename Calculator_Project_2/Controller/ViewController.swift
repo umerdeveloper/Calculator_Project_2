@@ -30,9 +30,38 @@ class ViewController: UIViewController {
         isDarkMode = !isDarkMode
         if isDarkMode && sender.tag == 19 {
             sender.setImage(whiteAppearanceMoonIcon, for: .normal)
+            // set view white
+            view.backgroundColor = .white
             
+            // answer textView color
+            calculatedAnswerTextView.textColor = UIColor(named: "output_text_color")
+            calculatedAnswerTextView.backgroundColor = .white
             
+            // tapped textView color
+            tappedButtonsTextView.textColor = UIColor(named: "tappedtext_color")
+            tappedButtonsTextView.backgroundColor = .white
             
+            //MARK: - Buttons color for whiteBG
+            for button in customButton {
+                //TODO: = color change
+                switch button.tag {
+                    case 0...9:
+                        button.backgroundColor = UIColor(named: "whiteBG_numbuttons_color")
+                        button.titleLabel?.textColor = UIColor(named: "output_text_color")
+                    case 10...16:
+                        button.backgroundColor = UIColor(named: "whiteBG_opbuttons_green")
+                        button.titleLabel?.textColor = UIColor(named: "whiteBG_opbuttons_text_color")
+                    case 17:
+                        button.backgroundColor = UIColor(named: "whiteGB_equal_red")
+                        button.titleLabel?.textColor = UIColor(named: "whiteBG_equal_text_color")
+                    case 18:
+                        button.backgroundColor = UIColor(named: "whiteBG_numbuttons_color")
+                        button.titleLabel?.textColor = UIColor(named: "output_text_color")
+                    default:
+                        button.backgroundColor = .black
+                        button.titleLabel?.textColor = .white
+                }
+            }
         }
         else if !isDarkMode && sender.tag == 19 {
             sender.setImage(darkAppearanceSunIcon, for: .normal)
@@ -46,7 +75,7 @@ class ViewController: UIViewController {
             tappedButtonsTextView.backgroundColor = .black
             tappedButtonsTextView.textColor = UIColor(named: "blackBG_tapped_text_color")
             
-            
+            //MARK: - Buttons Color for DarkMode
             for button in customButton {
                 //TODO: = color change
                 switch button.tag {
@@ -63,37 +92,11 @@ class ViewController: UIViewController {
                         button.backgroundColor = .black
                         button.titleLabel?.textColor = UIColor(named: "blackBG_tapped_text_color")
                     default:
-                        button.backgroundColor = .black
-                        button.titleLabel?.textColor = .white
+                        button.backgroundColor = .white
+                        button.titleLabel?.textColor = .black
                 }
             }
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
     
