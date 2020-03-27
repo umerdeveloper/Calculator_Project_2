@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-LG-1EZ">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-LG-1EZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="357" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
@@ -25,11 +25,16 @@
                                 <state key="normal" title="C">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFD-pe-dMk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-5P-VVM">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-5P-VVM" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="434" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -37,11 +42,16 @@
                                 <state key="normal" title="7">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DS-z0-7EY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-Hn-VSS">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-Hn-VSS" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="434" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -49,11 +59,16 @@
                                 <state key="normal" title="8">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVV-3h-dzc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv2-qV-hbb">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv2-qV-hbb" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="434" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -61,11 +76,16 @@
                                 <state key="normal" title="9">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIa-jQ-Ycv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-dF-Qql">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-dF-Qql" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="514" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -73,11 +93,16 @@
                                 <state key="normal" title="4">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYM-sF-xNI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-B6-98f">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-B6-98f" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="514" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -85,11 +110,16 @@
                                 <state key="normal" title="5">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMD-pm-Oqr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-e7-VcZ">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-e7-VcZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="514" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -97,11 +127,16 @@
                                 <state key="normal" title="6">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nU-4n-svB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-4a-T0T">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-4a-T0T" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="587" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -109,11 +144,16 @@
                                 <state key="normal" title="1">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lor-Oi-pFZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-5m-b6s">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-5m-b6s" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="587" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -121,11 +161,16 @@
                                 <state key="normal" title="2">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHe-2U-MJw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-JU-drG">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-JU-drG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="587" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -133,11 +178,16 @@
                                 <state key="normal" title="3">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88H-DR-1Ak"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ch-Zng">
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ch-Zng" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="665" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -145,11 +195,16 @@
                                 <state key="normal" title=".">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEa-o6-wqh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-ug-MPx">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-ug-MPx" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="357" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
@@ -157,11 +212,16 @@
                                 <state key="normal" title="+/-">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2jS-qg-ANo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-0p-jgP">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-0p-jgP" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="357" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
@@ -169,11 +229,16 @@
                                 <state key="normal" title="%">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvP-u5-UJf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Pp-avI">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Pp-avI" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="357" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
@@ -182,11 +247,16 @@
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIK-C5-89U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-J2-6gG">
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-J2-6gG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="434" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
@@ -194,11 +264,16 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ASm-kD-Hv8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-n0-T3t">
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-n0-T3t" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="514" width="70" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
@@ -207,11 +282,16 @@
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cV-Tz-Otc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-yO-Je2">
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-yO-Je2" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="587" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
@@ -220,11 +300,16 @@
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Awa-aR-Hom"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-Wt-D64">
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-Wt-D64" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="665" width="70" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteGB_equal_red"/>
@@ -233,11 +318,16 @@
                                     <color key="titleColor" name="whiteBG_equal_text_color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ew-cv-iKd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-5U-Mk9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJI-5U-Mk9" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="665" width="155" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
@@ -245,6 +335,11 @@
                                 <state key="normal" title="0">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculaterButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KK-pY-hqN"/>
                                 </connections>
