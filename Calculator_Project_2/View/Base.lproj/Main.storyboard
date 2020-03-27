@@ -17,10 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-LG-1EZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNg-LG-1EZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="357" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Fk2-rx-vrE"/>
+                                    <constraint firstAttribute="width" constant="75" id="x1S-Lo-eQ7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="C">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
@@ -34,10 +37,13 @@
                                     <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDz-HZ-nEV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-5P-VVM" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-5P-VVM" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="434" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5iS-4e-ekc"/>
+                                    <constraint firstAttribute="width" constant="75" id="i77-mj-dgg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="7">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -51,10 +57,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DS-z0-7EY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-Hn-VSS" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukq-Hn-VSS" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="434" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="9qg-Ku-DqX"/>
+                                    <constraint firstAttribute="height" constant="70" id="yts-R8-ZUI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="8">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -68,10 +77,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVV-3h-dzc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv2-qV-hbb" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv2-qV-hbb" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="434" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="FZN-kK-HRZ"/>
+                                    <constraint firstAttribute="width" constant="75" id="qA5-oJ-I1h"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="9">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -85,10 +97,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rIa-jQ-Ycv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-dF-Qql" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJI-dF-Qql" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="514" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3xd-QL-LDO"/>
+                                    <constraint firstAttribute="width" constant="75" id="J6Y-ec-kaG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="4">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -102,10 +117,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYM-sF-xNI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-B6-98f" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDp-B6-98f" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="514" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="6cM-pe-4U3"/>
+                                    <constraint firstAttribute="height" constant="70" id="eS3-b3-kyk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -119,10 +137,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jMD-pm-Oqr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-e7-VcZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-e7-VcZ" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="514" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="z8e-EH-KGg"/>
+                                    <constraint firstAttribute="width" constant="75" id="zfB-9N-cqC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -136,10 +157,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6nU-4n-svB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-4a-T0T" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-4a-T0T" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="43" y="592" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="lsf-ez-DXi"/>
+                                    <constraint firstAttribute="width" constant="75" id="yuW-jr-qEj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="1">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -153,10 +177,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lor-Oi-pFZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-5m-b6s" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYl-5m-b6s" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="592" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="iaX-Zz-a1q"/>
+                                    <constraint firstAttribute="height" constant="70" id="oKG-pV-kpt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -170,10 +197,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHe-2U-MJw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-JU-drG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-JU-drG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="592" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="M5L-ds-WEg"/>
+                                    <constraint firstAttribute="width" constant="75" id="QW7-tA-Gzm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="3">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -187,10 +217,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88H-DR-1Ak"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-ug-MPx" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBX-ug-MPx" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="128" y="357" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="YA2-Ig-Z6h"/>
+                                    <constraint firstAttribute="width" constant="75" id="iqo-T5-juS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title="+/-">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
@@ -204,10 +237,13 @@
                                     <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Um0-95-6M7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-0p-jgP" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-0p-jgP" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="357" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Th4-BL-zbT"/>
+                                    <constraint firstAttribute="width" constant="75" id="x9v-YY-2qB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="%">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
@@ -221,10 +257,13 @@
                                     <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJH-2t-MN6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Pp-avI" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Pp-avI" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="357" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="18y-Tf-Rcn"/>
+                                    <constraint firstAttribute="height" constant="70" id="qTn-gX-esL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="27"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
                                 <state key="normal" title="/">
@@ -240,10 +279,13 @@
                                     <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BRo-oc-Y0T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-J2-6gG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-J2-6gG" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="434" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CSg-Sl-w58"/>
+                                    <constraint firstAttribute="width" constant="75" id="Qb2-Ht-VOV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" name="whiteBG_opbuttons_text_color"/>
@@ -257,10 +299,13 @@
                                     <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZf-tK-f6v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-n0-T3t" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-n0-T3t" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="514" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="i2e-Iv-o2X"/>
+                                    <constraint firstAttribute="height" constant="70" id="vE1-h6-2GY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
                                 <state key="normal" title="-">
@@ -276,10 +321,13 @@
                                     <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oyo-V0-4SG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-yO-Je2" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afd-yO-Je2" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="592" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_opbuttons_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="LLd-hH-egD"/>
+                                    <constraint firstAttribute="height" constant="70" id="x9x-tm-dbD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="31"/>
                                 <color key="tintColor" name="whiteBG_opbuttons_text_color"/>
                                 <state key="normal" title="+">
@@ -295,26 +343,32 @@
                                     <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvr-TP-pzH"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-pL-R78">
-                                <rect key="frame" x="43" y="140" width="328" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" name="tappedtext_color"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-R2-HR6">
-                                <rect key="frame" x="43" y="202" width="328" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" name="output_text_color"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ch-Zng" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lHU-Kw-Oh4">
+                                <rect key="frame" x="40" y="140" width="334" height="149"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="3 + 2 - 1" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-pL-R78">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="54"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" name="tappedtext_color"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="786" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-R2-HR6">
+                                        <rect key="frame" x="0.0" y="62" width="334" height="87"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" name="output_text_color"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="50"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzv-ch-Zng" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="214" y="670" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteBG_numbuttons_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="CmW-96-Aov"/>
+                                    <constraint firstAttribute="width" constant="75" id="eW9-mN-GJa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <state key="normal" title=".">
                                     <color key="titleColor" name="whiteBG_numbuttons_text_color"/>
@@ -328,10 +382,13 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEa-o6-wqh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-Wt-D64" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-Wt-D64" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">
                                 <rect key="frame" x="301" y="670" width="75" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="whiteGB_equal_red"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="392-Dh-2yU"/>
+                                    <constraint firstAttribute="width" constant="75" id="UDT-mK-Xai"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
                                 <color key="tintColor" name="whiteBG_equal_text_color"/>
                                 <state key="normal" title="=">
@@ -364,9 +421,12 @@
                                     <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KK-pY-hqN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejb-WN-X3o">
-                                <rect key="frame" x="366" y="44" width="28" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejb-WN-X3o">
+                                <rect key="frame" x="366" y="64" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="BlI-h4-boU"/>
+                                    <constraint firstAttribute="width" constant="28" id="DcJ-QJ-86h"/>
+                                </constraints>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="moon">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
@@ -377,6 +437,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lHU-Kw-Oh4" secondAttribute="trailing" constant="40" id="31j-5b-k85"/>
+                            <constraint firstItem="Ejb-WN-X3o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Aui-tB-eYy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ejb-WN-X3o" secondAttribute="trailing" constant="20" id="D6B-Jq-xWB"/>
+                            <constraint firstItem="lHU-Kw-Oh4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="qsh-jf-CIw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
