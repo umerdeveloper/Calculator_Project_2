@@ -7,6 +7,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let performOperation = Operation()
+    
     // MARK: - UI Components
     @IBOutlet weak var tappedButtonsTextView: UITextView!
     @IBOutlet weak var calculatedAnswerTextView: UITextView!
@@ -53,32 +55,28 @@ class ViewController: UIViewController {
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
         if tappedButtonsTextView.text != ""{ previousNumber = Double(tappedButtonsTextView.text)! }
         if  tappedButtonsTextView.text != "" && // textview not empty
-            sender.tag != 10 && // empty
-            sender.tag != 17 { // result
-            // %
-            if sender.tag == 12 { tappedButtonsTextView.text += "%" }
-            // /
-            if sender.tag == 13 { tappedButtonsTextView.text += "/" }
-            // X
-            if sender.tag == 14 { tappedButtonsTextView.text += "X" }
-            // -
-            if sender.tag == 15 { tappedButtonsTextView.text += "-" }
-            // +
-            if sender.tag == 16 { tappedButtonsTextView.text += "+" }
+        sender.tag != performOperation.clearScreen &&
+        sender.tag != performOperation.result {
+            
+            if sender.tag == performOperation.percentage { tappedButtonsTextView.text += "%" }
+            if sender.tag == performOperation.divide { tappedButtonsTextView.text += "/" }
+            if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "X" }
+            if sender.tag == performOperation.subtract { tappedButtonsTextView.text += "-" }
+            if sender.tag == performOperation.add { tappedButtonsTextView.text += "+" }
             
             operation = sender.tag
             isPerfromingOperation = true
         }
             
-        else if sender.tag == 17 { // result
-            if operation == 12 { calculatedAnswerTextView.text = String(previousNumber / 100) }
-                else if operation == 13 { calculatedAnswerTextView.text = String(previousNumber / numberOnScreen) }
-                else if operation == 14 { calculatedAnswerTextView.text = String(previousNumber * numberOnScreen) }
-                else if operation == 15 { calculatedAnswerTextView.text = String(previousNumber - numberOnScreen) }
-                else if operation == 16 { calculatedAnswerTextView.text = String(previousNumber + numberOnScreen) }
+        else if sender.tag == performOperation.result {
+            if operation == performOperation.percentage { calculatedAnswerTextView.text = String(previousNumber / 100) }
+            else if operation == performOperation.divide { calculatedAnswerTextView.text = String(previousNumber / numberOnScreen) }
+            else if operation == performOperation.multiply { calculatedAnswerTextView.text = String(previousNumber * numberOnScreen) }
+            else if operation == performOperation.subtract { calculatedAnswerTextView.text = String(previousNumber - numberOnScreen) }
+            else if operation == performOperation.add { calculatedAnswerTextView.text = String(previousNumber + numberOnScreen) }
         }
             
-        else if sender.tag == 10 { // clear
+        else if sender.tag == performOperation.clearScreen {
             calculatedAnswerTextView.text = ""
             tappedButtonsTextView.text = ""
             numberOnScreen = 0.0
