@@ -80,7 +80,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Um0-95-6M7"/>
+                                                    <action selector="numbersTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Rq-Fl-9x9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-0p-jgP" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">

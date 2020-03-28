@@ -41,28 +41,29 @@ class ViewController: UIViewController {
     // MARK: - Numbers Action
     @IBAction func numbersTapped(_ sender: UIButton) {
         if isPerfromingOperation {
-            tappedButtonsTextView.text = String(sender.tag)
+            tappedButtonsTextView.text += String(sender.tag)
+            print("Tags pressed \(sender.tag)")
+            print("Tapped textview \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text!) ?? 0
             isPerfromingOperation = false
         }
         else if sender.tag != performOperation.dot && sender.tag != 0 {
             tappedButtonsTextView.text += String(sender.tag)
-            print("textview number: \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text)!
-            print("previous number before operation \(numberOnScreen)")
         }
-        else if sender.tag == performOperation.dot {
+        else if sender.tag == performOperation.dot && tappedButtonsTextView.text == "" {
             // if dot again press
             if tappedButtonsTextView.text.contains(".") { return }
             // else appened into text
-            tappedButtonsTextView.text += "."
-            print("textview number: \(tappedButtonsTextView.text!)")
+            tappedButtonsTextView.text += "0."
             numberOnScreen = Double(tappedButtonsTextView.text)!
-            print("previous number before operation \(numberOnScreen)")
         }
         else if sender.tag == 0 {
             if tappedButtonsTextView.text == "" { return }
             tappedButtonsTextView.text += "0"
+        }
+        else if sender.tag == performOperation.setNagative && tappedButtonsTextView.text == "" {
+            tappedButtonsTextView.text += "-"
         }
     }
     
@@ -70,7 +71,6 @@ class ViewController: UIViewController {
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
         if tappedButtonsTextView.text != "" {
             previousNumber = Double(Double(tappedButtonsTextView.text!)!)
-            print("first previous number: \(previousNumber)\n")
         }
         
         if  tappedButtonsTextView.text != "" && // textview not empty

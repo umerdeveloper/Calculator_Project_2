@@ -8,6 +8,7 @@
 7. alert controller to avoid operation buttons select before numbers
 8. dot add only once
 9. 0 can not add in start
+10. if dot press in start add (0.)
 
 
 
