@@ -10,6 +10,9 @@
 9. 0 can not add in start
 10. if dot press in start add (0.)
 11. (-/+) pressed add into start of value
+12. operator can not come after operator or if empty textview
+
+
 
 
 
