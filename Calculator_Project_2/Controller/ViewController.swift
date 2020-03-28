@@ -47,9 +47,9 @@ class ViewController: UIViewController {
         
         // TODO: - Check Typing or Not
         if isPerfromingOperation {
-            
-            tappedButtonsTextView.text += String(sender.tag)
-            numberOnScreen = Double(tappedButtonsTextView.text!) ?? 0
+            #warning("append if want to see list of all buttons 2+2x3 etc")
+            tappedButtonsTextView.text = String(sender.tag)
+            numberOnScreen = Double(tappedButtonsTextView.text!)!
             isPerfromingOperation = false
         }
             
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             print(tappedButtonsTextView.text!)
             tappedButtonsTextView.text += String(sender.tag)
             print(tappedButtonsTextView.text!)
-            //numberOnScreen = Double(tappedButtonsTextView.text)!
+            numberOnScreen = Double(tappedButtonsTextView.text)!
         }
             
         // TODO: - Handle dot(.) on Start
@@ -95,42 +95,51 @@ class ViewController: UIViewController {
            // numberOnScreen = Double(tappedButtonsTextView.text)!
         }
     }
+    
     // MARK: - Result Logic
     #warning("work on result")
     #warning("if textview last digit is . return")
     #warning("add dot after operator and numbers")
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         text = tappedButtonsTextView.text!
+        
         if tappedButtonsTextView.text == empty ||
             inLastNotDigit(text) || text.last == "." { return }
         else {
             
-            text = String(tappedButtonsTextView.text!)
-            let answer = Double(text)
-            print(answer)
+            if operation == performOperation.add {
+                calculatedAnswerTextView.text = String(previousNumber + numberOnScreen)
+            }
+            if operation == performOperation.divide {
+                if numberOnScreen == 0 { calculatedAnswerTextView.text = "Error" }
+                calculatedAnswerTextView.text = String(previousNumber / numberOnScreen)
+                
+            }
+            if operation == performOperation.multiply {
+                calculatedAnswerTextView.text = String(previousNumber * numberOnScreen)
+            }
+            if operation == performOperation.subtract{
+                calculatedAnswerTextView.text = String(previousNumber - numberOnScreen)
+            }
             
-            
-            
-            
-            
-            
-            
-            
+            print("Previous number\(previousNumber)")
+            print("number on screen \(numberOnScreen)")
         }
-        
-        
-        
-        
     }
     
     
     
     // MARK: - Operations Action
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
+        // store previous value
+        if tappedButtonsTextView.text != empty {
+            text = tappedButtonsTextView.text
+            previousNumber = Double(text)!
+        }
+        
         // + - x ÷
         text = tappedButtonsTextView.text!
         if tappedButtonsTextView.text == empty || text.last == "." { return }
-        
         
         if sender.tag == performOperation.divide {
             if  inLastNotDigit(text) { return }
@@ -151,6 +160,10 @@ class ViewController: UIViewController {
             if  inLastNotDigit(text) { return }
             else { tappedButtonsTextView.text += "-" }
         }
+        
+        // perform maths
+        operation = sender.tag
+        isPerfromingOperation = true
     }
     
     func inLastNotDigit(_ text: String) -> Bool {
@@ -187,7 +200,6 @@ class ViewController: UIViewController {
         operation = 0
     }
 }
-
 
 extension ViewController {
     
