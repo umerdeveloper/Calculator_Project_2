@@ -52,7 +52,9 @@ class ViewController: UIViewController {
             print("previous number before operation \(numberOnScreen)")
         }
         else if sender.tag == performOperation.dot {
+            // if dot again press
             if tappedButtonsTextView.text.contains(".") { return }
+            // else appened into text
             tappedButtonsTextView.text += "."
             print("textview number: \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text)!
