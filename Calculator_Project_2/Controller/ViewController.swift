@@ -86,21 +86,14 @@ class ViewController: UIViewController {
             
         // TODO: - Handle -ve value (-) add
         else if sender.tag == performOperation.setNagative {
-            //tappedButtonsTextView.insertText("-")
             if tappedButtonsTextView.text.contains("-") { return }
             var negativeSign = "-"
+            
+            // add to the start of textView
             negativeSign += tappedButtonsTextView.text
             tappedButtonsTextView.text = negativeSign
-            //tappedButtonsTextView.text += negativeSign
-            //tappedButtonsTextView.text += "-"
-            //numberOnScreen = Double(tappedButtonsTextView.text)!
             print(numberOnScreen)
-
         }
-        
-//        else if sender.tag == performOperation.setNagative && tappedButtonsTextView.text != empty {
-//            return
-//        }
     }
     // MARK: - Result Logic
     @IBAction func resultButtonTapped(_ sender: UIButton) {
