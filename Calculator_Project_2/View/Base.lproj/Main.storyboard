@@ -96,7 +96,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="operationsButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJH-2t-MN6"/>
+                                                    <action selector="percentageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Idm-Cg-SEE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N08-Pp-avI" customClass="RoundButton" customModule="Calculator_Project_2" customModuleProvider="target">

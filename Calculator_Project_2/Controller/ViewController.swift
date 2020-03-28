@@ -54,15 +54,12 @@ class ViewController: UIViewController {
         else if sender.tag != performOperation.dot && sender.tag != 0 && sender.tag != performOperation.setNagative {
             tappedButtonsTextView.text += String(sender.tag)
             numberOnScreen = Double(tappedButtonsTextView.text)!
-            print(numberOnScreen)
         }
             
         // TODO: - Handle dot(.) on Start
         else if sender.tag == performOperation.dot && tappedButtonsTextView.text == empty {
             tappedButtonsTextView.text += "0."
             numberOnScreen = Double(tappedButtonsTextView.text)!
-            print(numberOnScreen)
-
         }
             
         // TODO: - Handle Zero on Start
@@ -70,8 +67,6 @@ class ViewController: UIViewController {
             if tappedButtonsTextView.text == empty { return }
             tappedButtonsTextView.text += "0"
             numberOnScreen = Double(tappedButtonsTextView.text)!
-            print(numberOnScreen)
-
         }
             
         // TODO: - Handle dot(.) add only once
@@ -80,22 +75,20 @@ class ViewController: UIViewController {
             tappedButtonsTextView.text += "."
             #warning("how to append dot in double value")
             numberOnScreen = Double(tappedButtonsTextView.text)!
-            print(numberOnScreen)
-
         }
             
         // TODO: - Handle -ve value (-) add
         else if sender.tag == performOperation.setNagative {
             if tappedButtonsTextView.text.contains("-") { return }
             var negativeSign = "-"
-            
+            #warning("work on positive sign")
             // add to the start of textView
             negativeSign += tappedButtonsTextView.text
             tappedButtonsTextView.text = negativeSign
-            print(numberOnScreen)
         }
     }
     // MARK: - Result Logic
+    #warning("work on result")
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         
         
@@ -137,6 +130,10 @@ class ViewController: UIViewController {
 //        }
             
             
+    }
+    // MARK: - Find Percentage
+    @IBAction func percentageButtonTapped(_ sender: UIButton) {
+        
     }
     // MARK: - Clear Screen
     @IBAction func clearButtonTapped(_ sender: UIButton) {
