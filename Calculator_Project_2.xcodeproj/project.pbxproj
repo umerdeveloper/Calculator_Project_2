@@ -13,6 +13,7 @@
 		CB113499242CCE95001860E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB113497242CCE95001860E8 /* Main.storyboard */; };
 		CB11349B242CCE98001860E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB11349A242CCE98001860E8 /* Assets.xcassets */; };
 		CB11349E242CCE98001860E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB11349C242CCE98001860E8 /* LaunchScreen.storyboard */; };
+		CBB8422B242F229900A6F7A8 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB8422A242F229900A6F7A8 /* Operation.swift */; };
 		CBCE9089242D997C00DE868F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCE9088242D997C00DE868F /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		CB11349D242CCE98001860E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB11349F242CCE98001860E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB1134A6242CD392001860E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CBB8422A242F229900A6F7A8 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		CBCE9088242D997C00DE868F /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				CB113495242CCE95001860E8 /* ViewController.swift */,
+				CBB8422A242F229900A6F7A8 /* Operation.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				CBCE9089242D997C00DE868F /* RoundButton.swift in Sources */,
 				CB113496242CCE95001860E8 /* ViewController.swift in Sources */,
 				CB113492242CCE95001860E8 /* AppDelegate.swift in Sources */,
+				CBB8422B242F229900A6F7A8 /* Operation.swift in Sources */,
 				CB113494242CCE95001860E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
