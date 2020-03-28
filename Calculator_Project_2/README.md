@@ -16,7 +16,7 @@
 13. dot (.) should not come after operator
 14. dot (.) should not come before operator
 15. if operator or dot on last of text dont perform = operation
-
+16. if (-) in start also find %
 
 
 

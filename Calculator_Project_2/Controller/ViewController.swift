@@ -207,7 +207,19 @@ class ViewController: UIViewController {
     // MARK: - Find Percentage
     
     @IBAction func percentageButtonTapped(_ sender: UIButton) {
+        calculatedAnswerTextView.text = "0"
         #warning("work on if operator in start")
+        text = tappedButtonsTextView.text!
+        
+        if text.first == "-" {
+           var value = Double(tappedButtonsTextView.text)!
+            value =  value / 100
+            print(value)
+            calculatedAnswerTextView.text = String(value)
+            
+            
+        }
+        
         
         if  tappedButtonsTextView.text.contains("+") ||
             tappedButtonsTextView.text.contains("-") ||
