@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Numbers Action
-    @IBAction func numbersButtonTapped(_ sender: UIButton) {
+    @IBAction func operandsButtonTapped(_ sender: UIButton) {
         
         // TODO: - Check Typing or Not
         if isPerfromingOperation {
@@ -93,8 +93,11 @@ class ViewController: UIViewController {
         // TODO: - Handle -ve value (-) add
         
     }
+    
     @IBAction func positiveNegativeButtonTapped(_ sender: UIButton) {
+        #warning("work on positive number")
         text = tappedButtonsTextView.text
+        calculatedAnswerTextView.text = "0"
         
         if text == empty {
             tappedButtonsTextView.text = "-"
@@ -109,6 +112,8 @@ class ViewController: UIViewController {
             negativeSign += text
             text = negativeSign
             tappedButtonsTextView.text = text
+            previousNumber = Double(tappedButtonsTextView.text!)!
+            print("Previous number where - before: \(previousNumber)")
         }
         
     }
@@ -142,9 +147,9 @@ class ViewController: UIViewController {
                 operatorResult = previousNumber - numberOnScreen
                 calculatedAnswerTextView.text = String(operatorResult)
             }
-            tappedButtonsTextView.text = empty
-            numberOnScreen = 0
         }
+        tappedButtonsTextView.text = empty
+        numberOnScreen = 0
         
     }
     
@@ -154,7 +159,8 @@ class ViewController: UIViewController {
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
         // store previous value
             text = tappedButtonsTextView.text!
-        if text.first == "-" { return }
+        // if text.first == "-" { return }
+        if tappedButtonsTextView.text == empty { return }
         if tappedButtonsTextView.text != empty {
             text = tappedButtonsTextView.text
             previousNumber = Double(text)!
@@ -199,7 +205,9 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Find Percentage
+    
     @IBAction func percentageButtonTapped(_ sender: UIButton) {
+        #warning("work on if operator in start")
         
         if  tappedButtonsTextView.text.contains("+") ||
             tappedButtonsTextView.text.contains("-") ||
@@ -212,6 +220,7 @@ class ViewController: UIViewController {
             value = value / 100
             calculatedAnswerTextView.text = String(value)
         }
+        tappedButtonsTextView.text = empty
     }
     
     // MARK: - Clear Screen
