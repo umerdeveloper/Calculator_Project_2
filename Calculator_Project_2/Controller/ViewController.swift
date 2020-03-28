@@ -109,9 +109,9 @@ class ViewController: UIViewController {
             return
         }
         else {
-            negativeSign += text
-            text = negativeSign
-            tappedButtonsTextView.text = text
+            negativeSign = "-"
+            negativeSign += tappedButtonsTextView.text
+            tappedButtonsTextView.text = negativeSign
             previousNumber = Double(tappedButtonsTextView.text!)!
             print("Previous number where - before: \(previousNumber)")
         }
@@ -216,8 +216,6 @@ class ViewController: UIViewController {
             value =  value / 100
             print(value)
             calculatedAnswerTextView.text = String(value)
-            
-            
         }
         
         
