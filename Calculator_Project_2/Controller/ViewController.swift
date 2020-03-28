@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var previousNumber: Double = 0
     var operation: Int = 0
     var isPerfromingOperation: Bool = false
+    let empty: String = ""
     
     // MARK: - UI Supporting Properties
     var isDarkMode: Bool = false
@@ -40,41 +41,78 @@ class ViewController: UIViewController {
     
     // MARK: - Numbers Action
     @IBAction func numbersTapped(_ sender: UIButton) {
+        
+        // TODO: - Check Typing or Not
         if isPerfromingOperation {
+            
             tappedButtonsTextView.text += String(sender.tag)
-            print("Tags pressed \(sender.tag)")
-            print("Tapped textview \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text!) ?? 0
             isPerfromingOperation = false
         }
-        else if sender.tag != performOperation.dot && sender.tag != 0 {
+            
+        // TODO: - Handle dot(.) and Zero
+        else if sender.tag != performOperation.dot && sender.tag != 0 && sender.tag != performOperation.setNagative {
             tappedButtonsTextView.text += String(sender.tag)
             numberOnScreen = Double(tappedButtonsTextView.text)!
+            print(numberOnScreen)
         }
-        else if sender.tag == performOperation.dot && tappedButtonsTextView.text == "" {
-            // if dot again press
-            //if tappedButtonsTextView.text.contains(".") { return }
-            // else appened into text
+            
+        // TODO: - Handle dot(.) on Start
+        else if sender.tag == performOperation.dot && tappedButtonsTextView.text == empty {
             tappedButtonsTextView.text += "0."
             numberOnScreen = Double(tappedButtonsTextView.text)!
+            print(numberOnScreen)
+
         }
-        else if sender.tag == performOperation.dot && tappedButtonsTextView.text != "" {
+            
+        // TODO: - Handle Zero on Start
+        else if sender.tag == performOperation.zero {
+            if tappedButtonsTextView.text == empty { return }
+            tappedButtonsTextView.text += "0"
+            numberOnScreen = Double(tappedButtonsTextView.text)!
+            print(numberOnScreen)
+
+        }
+            
+        // TODO: - Handle dot(.) add only once
+        else if sender.tag == performOperation.dot && tappedButtonsTextView.text != empty {
             if tappedButtonsTextView.text.contains(".") { return }
             tappedButtonsTextView.text += "."
             #warning("how to append dot in double value")
             numberOnScreen = Double(tappedButtonsTextView.text)!
+            print(numberOnScreen)
+
         }
-        else if sender.tag == 0 {
-            if tappedButtonsTextView.text == "" { return }
-            tappedButtonsTextView.text += "0"
+            
+        // TODO: - Handle -ve value (-) add
+        else if sender.tag == performOperation.setNagative {
+            //tappedButtonsTextView.insertText("-")
+            if tappedButtonsTextView.text.contains("-") { return }
+            var negativeSign = "-"
+            negativeSign += tappedButtonsTextView.text
+            tappedButtonsTextView.text = negativeSign
+            //tappedButtonsTextView.text += negativeSign
+            //tappedButtonsTextView.text += "-"
+            //numberOnScreen = Double(tappedButtonsTextView.text)!
+            print(numberOnScreen)
+
         }
-        else if sender.tag == performOperation.setNagative && tappedButtonsTextView.text == "" {
-            tappedButtonsTextView.text += "-"
-        }
+        
+//        else if sender.tag == performOperation.setNagative && tappedButtonsTextView.text != empty {
+//            return
+//        }
     }
+    // MARK: - Result Logic
+    @IBAction func resultButtonTapped(_ sender: UIButton) {
+        
+        
+    }
+    
+    
     
     // MARK: - Operations Action
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
+        #warning("if textview last digit is . return")
         if tappedButtonsTextView.text != "" {
             previousNumber = Double(Double(tappedButtonsTextView.text!)!)
         }
@@ -83,7 +121,7 @@ class ViewController: UIViewController {
             sender.tag != performOperation.clearScreen &&
         sender.tag != performOperation.result && sender.tag != performOperation.percentage {
             
-            if sender.tag == performOperation.divide { tappedButtonsTextView.text += "/" }
+            if sender.tag == performOperation.divide { tappedButtonsTextView.text += "÷" }
             if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "X" }
             if sender.tag == performOperation.subtract { tappedButtonsTextView.text += "-" }
             if sender.tag == performOperation.add { tappedButtonsTextView.text += "+" }
@@ -92,27 +130,29 @@ class ViewController: UIViewController {
             isPerfromingOperation = true
         }
             
-            if sender.tag == performOperation.result {
+//            if sender.tag == performOperation.result {
+//
+//            tappedButtonsTextView.text = ""
+//            print("number on scree: \(numberOnScreen)\n")
+//            print("Previous value: \(previousNumber)")
+//
+//            if operation == performOperation.percentage { calculatedAnswerTextView.text = String(previousNumber / 100) }
+//            else if operation == performOperation.divide { calculatedAnswerTextView.text = String(previousNumber / numberOnScreen) }
+//            else if operation == performOperation.multiply { calculatedAnswerTextView.text = String(previousNumber * numberOnScreen) }
+//            else if operation == performOperation.subtract { calculatedAnswerTextView.text = String(previousNumber - numberOnScreen) }
+//            else if operation == performOperation.add { calculatedAnswerTextView.text = String(previousNumber + numberOnScreen) }
+//        }
             
-            tappedButtonsTextView.text = ""
-            print("number on scree: \(numberOnScreen)\n")
-            print("Previous value: \(previousNumber)")
             
-            if operation == performOperation.percentage { calculatedAnswerTextView.text = String(previousNumber / 100) }
-            else if operation == performOperation.divide { calculatedAnswerTextView.text = String(previousNumber / numberOnScreen) }
-            else if operation == performOperation.multiply { calculatedAnswerTextView.text = String(previousNumber * numberOnScreen) }
-            else if operation == performOperation.subtract { calculatedAnswerTextView.text = String(previousNumber - numberOnScreen) }
-            else if operation == performOperation.add { calculatedAnswerTextView.text = String(previousNumber + numberOnScreen) }
-        }
-            
-            if sender.tag == performOperation.clearScreen {
-            calculatedAnswerTextView.text = ""
-            tappedButtonsTextView.text = ""
-            numberOnScreen = 0
-            previousNumber = 0
-            operation = 0
-        }
-        else { return }
+    }
+    // MARK: - Clear Screen
+    @IBAction func clearButtonTapped(_ sender: UIButton) {
+        
+        calculatedAnswerTextView.text = "0"
+        tappedButtonsTextView.text = ""
+        numberOnScreen = 0
+        previousNumber = 0
+        operation = 0
     }
 }
 

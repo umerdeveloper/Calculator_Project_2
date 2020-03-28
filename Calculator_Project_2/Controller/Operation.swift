@@ -1,5 +1,5 @@
 struct Operation {
-    
+    let zero = 0
     let clearScreen = 10
     let setNagative = 11
     let percentage = 12
