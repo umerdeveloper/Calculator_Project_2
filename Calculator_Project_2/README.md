@@ -1,4 +1,6 @@
 #  Calculator_Project_2
+# Requirements
+# Logics considered
 1. Custom Dark Mode not like in iOS 13
 2. Support iOS  >12 and iPhone 6 Screen and above till 11 pro max
 3. textViews are not editable
@@ -13,6 +15,8 @@
 12. operator can not come after operator or if empty textview
 13. dot (.) should not come after operator
 14. dot (.) should not come before operator
+15. if operator or dot on last of text dont perform = operation
+
 
 
 

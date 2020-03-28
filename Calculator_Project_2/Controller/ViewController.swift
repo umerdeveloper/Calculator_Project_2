@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     var operation: Int = 0
     var isPerfromingOperation: Bool = false
     let empty: String = ""
+    var text: String = ""
+    var negativeSign: String = "-"
     
     // MARK: - UI Supporting Properties
     var isDarkMode: Bool = false
@@ -75,7 +77,7 @@ class ViewController: UIViewController {
             
         // TODO: - Handle dot(.) add only once
         else if sender.tag == performOperation.dot && tappedButtonsTextView.text != empty {
-            let text = tappedButtonsTextView.text!
+            text = tappedButtonsTextView.text!
             // dot should not come after operator
             if tappedButtonsTextView.text.contains(".") || inLastNotDigit(text) { return }
             tappedButtonsTextView.text += "."
@@ -86,7 +88,6 @@ class ViewController: UIViewController {
         // TODO: - Handle -ve value (-) add
         else if sender.tag == performOperation.setNagative {
             if tappedButtonsTextView.text.contains("-") || tappedButtonsTextView.text == empty { return }
-            var negativeSign = "-"
             #warning("work on positive sign")
             // add to the start of textView
             negativeSign += tappedButtonsTextView.text
@@ -97,8 +98,25 @@ class ViewController: UIViewController {
     // MARK: - Result Logic
     #warning("work on result")
     #warning("if textview last digit is . return")
+    #warning("add dot after operator and numbers")
     @IBAction func resultButtonTapped(_ sender: UIButton) {
-        if tappedButtonsTextView.text == empty { return }
+        text = tappedButtonsTextView.text!
+        if tappedButtonsTextView.text == empty ||
+            inLastNotDigit(text) || text.last == "." { return }
+        else {
+            
+            text = String(tappedButtonsTextView.text!)
+            let answer = Double(text)
+            print(answer)
+            
+            
+            
+            
+            
+            
+            
+            
+        }
         
         
         
@@ -110,7 +128,7 @@ class ViewController: UIViewController {
     // MARK: - Operations Action
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
         // + - x ÷
-        let text = tappedButtonsTextView.text!
+        text = tappedButtonsTextView.text!
         if tappedButtonsTextView.text == empty || text.last == "." { return }
         
         
