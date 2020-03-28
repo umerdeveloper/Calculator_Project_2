@@ -53,9 +53,15 @@ class ViewController: UIViewController {
         }
         else if sender.tag == performOperation.dot && tappedButtonsTextView.text == "" {
             // if dot again press
-            if tappedButtonsTextView.text.contains(".") { return }
+            //if tappedButtonsTextView.text.contains(".") { return }
             // else appened into text
             tappedButtonsTextView.text += "0."
+            numberOnScreen = Double(tappedButtonsTextView.text)!
+        }
+        else if sender.tag == performOperation.dot && tappedButtonsTextView.text != "" {
+            if tappedButtonsTextView.text.contains(".") { return }
+            tappedButtonsTextView.text += "."
+            #warning("how to append dot in double value")
             numberOnScreen = Double(tappedButtonsTextView.text)!
         }
         else if sender.tag == 0 {
