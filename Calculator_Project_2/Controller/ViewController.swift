@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         }
             
         // TODO: - Handle dot(.) and Zero
-        else if sender.tag != performOperation.dot && sender.tag != 0 && sender.tag != performOperation.setNagative {
+        else if sender.tag != performOperation.dot && sender.tag != 0 {
             print(tappedButtonsTextView.text!)
             tappedButtonsTextView.text += String(sender.tag)
             print(tappedButtonsTextView.text!)
@@ -91,20 +91,26 @@ class ViewController: UIViewController {
         }
             
         // TODO: - Handle -ve value (-) add
-        else if sender.tag == performOperation.setNagative {
-            if tappedButtonsTextView.text.contains("-") { return } else {
-                #warning("work on positive sign")
-                // add to the start of textView
-                print("Negative value: \(negativeSign)")
-                negativeSign += tappedButtonsTextView.text
-                tappedButtonsTextView.text = negativeSign
-                print(negativeSign)
-                numberOnScreen = Double(tappedButtonsTextView.text)!
-                print(numberOnScreen)
-                
-            }
-            
+        
+    }
+    @IBAction func positiveNegativeButtonTapped(_ sender: UIButton) {
+        text = tappedButtonsTextView.text
+        
+        if text == empty {
+            tappedButtonsTextView.text = "-"
         }
+        else if text.contains("-") {
+            return
+        }
+        else if inLastNotDigit(text) {
+            return
+        }
+        else {
+            negativeSign += text
+            text = negativeSign
+            tappedButtonsTextView.text = text
+        }
+        
     }
     
     // MARK: - Result Logic
@@ -148,6 +154,7 @@ class ViewController: UIViewController {
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
         // store previous value
             text = tappedButtonsTextView.text!
+        if text.first == "-" { return }
         if tappedButtonsTextView.text != empty {
             text = tappedButtonsTextView.text
             previousNumber = Double(text)!
