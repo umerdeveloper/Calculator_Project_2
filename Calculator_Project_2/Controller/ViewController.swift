@@ -28,11 +28,11 @@ class ViewController: UIViewController {
     //MARK: - App Appearance
     @IBAction func appearanceButtonTapped(_ sender: UIButton) {
         isDarkMode = !isDarkMode
-        if !isDarkMode && sender.tag == 19 {
+        if !isDarkMode {
             sender.setImage(whiteAppearanceMoonIcon, for: .normal)
             colorsForLightMode()
         }
-        else if isDarkMode && sender.tag == 19 {
+        else if isDarkMode {
             sender.setImage(darkAppearanceSunIcon, for: .normal)
             colorsForDarkMode()
         }
@@ -42,10 +42,10 @@ class ViewController: UIViewController {
     @IBAction func numbersTapped(_ sender: UIButton) {
         if isPerfromingOperation {
             tappedButtonsTextView.text = String(sender.tag)
-            numberOnScreen = Double(Double(tappedButtonsTextView.text!)!)
+            numberOnScreen = Double(tappedButtonsTextView.text!) ?? 0
             isPerfromingOperation = false
         }
-        else if sender.tag != performOperation.dot {
+        else if sender.tag != performOperation.dot && sender.tag != 0 {
             tappedButtonsTextView.text += String(sender.tag)
             print("textview number: \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text)!
@@ -59,7 +59,10 @@ class ViewController: UIViewController {
             print("textview number: \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text)!
             print("previous number before operation \(numberOnScreen)")
-
+        }
+        else if sender.tag == 0 {
+            if tappedButtonsTextView.text == "" { return }
+            tappedButtonsTextView.text += "0"
         }
     }
     

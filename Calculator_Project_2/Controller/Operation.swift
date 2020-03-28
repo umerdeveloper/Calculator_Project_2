@@ -9,5 +9,6 @@ struct Operation {
     let add = 16
     let result = 17
     let dot = 18
+    let appearanceButton = 19
     
 }
