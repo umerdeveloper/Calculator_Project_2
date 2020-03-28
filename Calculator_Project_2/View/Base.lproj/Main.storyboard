@@ -388,7 +388,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="resultButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUx-dH-axf"/>
+                                                            <action selector="equalOperatorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUx-dH-axf"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
