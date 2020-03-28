@@ -11,6 +11,9 @@
 10. if dot press in start add (0.)
 11. (-/+) pressed add into start of value
 12. operator can not come after operator or if empty textview
+13. dot (.) should not come after operator
+14. dot (.) should not come before operator
+
 
 
 

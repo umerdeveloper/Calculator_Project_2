@@ -53,29 +53,34 @@ class ViewController: UIViewController {
             
         // TODO: - Handle dot(.) and Zero
         else if sender.tag != performOperation.dot && sender.tag != 0 && sender.tag != performOperation.setNagative {
+            print(tappedButtonsTextView.text!)
             tappedButtonsTextView.text += String(sender.tag)
-            numberOnScreen = Double(tappedButtonsTextView.text)!
+            print(tappedButtonsTextView.text!)
+            //numberOnScreen = Double(tappedButtonsTextView.text)!
         }
             
         // TODO: - Handle dot(.) on Start
         else if sender.tag == performOperation.dot && tappedButtonsTextView.text == empty {
             tappedButtonsTextView.text += "0."
             numberOnScreen = Double(tappedButtonsTextView.text)!
+            print("dot press and text empty: \(numberOnScreen)")
         }
             
         // TODO: - Handle Zero on Start
         else if sender.tag == performOperation.zero {
             if tappedButtonsTextView.text == empty { return }
             tappedButtonsTextView.text += "0"
-            numberOnScreen = Double(tappedButtonsTextView.text)!
+            //numberOnScreen = Double(tappedButtonsTextView.text)!
         }
             
         // TODO: - Handle dot(.) add only once
         else if sender.tag == performOperation.dot && tappedButtonsTextView.text != empty {
-            if tappedButtonsTextView.text.contains(".") { return }
+            let text = tappedButtonsTextView.text!
+            // dot should not come after operator
+            if tappedButtonsTextView.text.contains(".") || inLastNotDigit(text) { return }
             tappedButtonsTextView.text += "."
             #warning("how to append dot in double value")
-            numberOnScreen = Double(tappedButtonsTextView.text)!
+            //numberOnScreen = Double(tappedButtonsTextView.text)!
         }
             
         // TODO: - Handle -ve value (-) add
@@ -86,7 +91,7 @@ class ViewController: UIViewController {
             // add to the start of textView
             negativeSign += tappedButtonsTextView.text
             tappedButtonsTextView.text = negativeSign
-            numberOnScreen = Double(tappedButtonsTextView.text)!
+           // numberOnScreen = Double(tappedButtonsTextView.text)!
         }
     }
     // MARK: - Result Logic
@@ -105,8 +110,9 @@ class ViewController: UIViewController {
     // MARK: - Operations Action
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
         // + - x ÷
-        if tappedButtonsTextView.text == empty { return }
         let text = tappedButtonsTextView.text!
+        if tappedButtonsTextView.text == empty || text.last == "." { return }
+        
         
         if sender.tag == performOperation.divide {
             if  inLastNotDigit(text) { return }
@@ -127,28 +133,6 @@ class ViewController: UIViewController {
             if  inLastNotDigit(text) { return }
             else { tappedButtonsTextView.text += "-" }
         }
-        
-//        if tappedButtonsTextView.text != "" {
-//            previousNumber = Double(Double(tappedButtonsTextView.text!)!)
-//        }
-//
-//        if  tappedButtonsTextView.text != empty {
-//
-//            if sender.tag == performOperation.divide { tappedButtonsTextView.text += "÷" }
-//            if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "x" }
-//            if sender.tag == performOperation.subtract { tappedButtonsTextView.text += "-" }
-//            if sender.tag == performOperation.add { tappedButtonsTextView.text += "+" }
-//
-//            operation = sender.tag
-//            isPerfromingOperation = true
-//        }
-//
-//            if operation == performOperation.percentage { calculatedAnswerTextView.text = String(previousNumber / 100) }
-//            else if operation == performOperation.divide { calculatedAnswerTextView.text = String(previousNumber / numberOnScreen) }
-//            else if operation == performOperation.multiply { calculatedAnswerTextView.text = String(previousNumber * numberOnScreen) }
-//            else if operation == performOperation.subtract { calculatedAnswerTextView.text = String(previousNumber - numberOnScreen) }
-//            else if operation == performOperation.add { calculatedAnswerTextView.text = String(previousNumber + numberOnScreen) }
-            
     }
     
     func inLastNotDigit(_ text: String) -> Bool {
