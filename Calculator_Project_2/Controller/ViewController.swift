@@ -134,6 +134,25 @@ class ViewController: UIViewController {
     // MARK: - Find Percentage
     @IBAction func percentageButtonTapped(_ sender: UIButton) {
         
+        if  tappedButtonsTextView.text.contains("+") ||
+            tappedButtonsTextView.text.contains("-") ||
+            tappedButtonsTextView.text.contains("÷") ||
+            tappedButtonsTextView.text.contains("X") ||
+            tappedButtonsTextView.text == empty { return }
+            
+        else {
+            var value = Double(tappedButtonsTextView.text)!
+            value = value / 100
+            calculatedAnswerTextView.text = String(value)
+        }
+        
+        
+        
+        
+        
+        
+        
+        
     }
     // MARK: - Clear Screen
     @IBAction func clearButtonTapped(_ sender: UIButton) {
