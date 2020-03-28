@@ -85,6 +85,7 @@ class ViewController: UIViewController {
             // add to the start of textView
             negativeSign += tappedButtonsTextView.text
             tappedButtonsTextView.text = negativeSign
+            numberOnScreen = Double(tappedButtonsTextView.text)!
         }
     }
     // MARK: - Result Logic
@@ -108,7 +109,7 @@ class ViewController: UIViewController {
         sender.tag != performOperation.result && sender.tag != performOperation.percentage {
             
             if sender.tag == performOperation.divide { tappedButtonsTextView.text += "÷" }
-            if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "X" }
+            if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "x" }
             if sender.tag == performOperation.subtract { tappedButtonsTextView.text += "-" }
             if sender.tag == performOperation.add { tappedButtonsTextView.text += "+" }
             
@@ -131,13 +132,14 @@ class ViewController: UIViewController {
             
             
     }
+    
     // MARK: - Find Percentage
     @IBAction func percentageButtonTapped(_ sender: UIButton) {
         
         if  tappedButtonsTextView.text.contains("+") ||
             tappedButtonsTextView.text.contains("-") ||
             tappedButtonsTextView.text.contains("÷") ||
-            tappedButtonsTextView.text.contains("X") ||
+            tappedButtonsTextView.text.contains("x") ||
             tappedButtonsTextView.text == empty { return }
             
         else {
@@ -145,15 +147,8 @@ class ViewController: UIViewController {
             value = value / 100
             calculatedAnswerTextView.text = String(value)
         }
-        
-        
-        
-        
-        
-        
-        
-        
     }
+    
     // MARK: - Clear Screen
     @IBAction func clearButtonTapped(_ sender: UIButton) {
         
