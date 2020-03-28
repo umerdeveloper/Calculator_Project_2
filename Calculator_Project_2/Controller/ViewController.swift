@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     let empty: String = ""
     var text: String = ""
     var negativeSign: String = "-"
+    var operatorResult: Double = 0.0
     
     // MARK: - UI Supporting Properties
     var isDarkMode: Bool = false
@@ -108,20 +109,27 @@ class ViewController: UIViewController {
         else {
             
             if operation == performOperation.add {
-                calculatedAnswerTextView.text = String(previousNumber + numberOnScreen)
+                operatorResult = previousNumber + numberOnScreen
+                calculatedAnswerTextView.text = String(operatorResult)
+                // testing
+                //previousNumber = Double(calculatedAnswerTextView.text)!
             }
             if operation == performOperation.divide {
                 if numberOnScreen == 0 { calculatedAnswerTextView.text = "Error" }
-                calculatedAnswerTextView.text = String(previousNumber / numberOnScreen)
+                else {
+                    operatorResult = previousNumber / numberOnScreen
+                    calculatedAnswerTextView.text = String(operatorResult) }
                 
             }
             if operation == performOperation.multiply {
-                calculatedAnswerTextView.text = String(previousNumber * numberOnScreen)
+                operatorResult = previousNumber * numberOnScreen
+                calculatedAnswerTextView.text = String(operatorResult)
             }
             if operation == performOperation.subtract{
-                calculatedAnswerTextView.text = String(previousNumber - numberOnScreen)
+                operatorResult = previousNumber - numberOnScreen
+                calculatedAnswerTextView.text = String(operatorResult)
             }
-            
+            tappedButtonsTextView.text = empty
             print("Previous number\(previousNumber)")
             print("number on screen \(numberOnScreen)")
         }
