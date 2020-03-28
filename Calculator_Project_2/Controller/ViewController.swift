@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var allButtons: [UIButton]!
     
     // MARK: - Logic Supporting Properties
-    var numberOnScreen: Double = 0.0
+    var numberOnScreen: Double = 0
     var previousNumber: Double = 0
     var operation: Int = 0
     var isPerfromingOperation: Bool = false
@@ -42,23 +42,36 @@ class ViewController: UIViewController {
     @IBAction func numbersTapped(_ sender: UIButton) {
         if isPerfromingOperation {
             tappedButtonsTextView.text = String(sender.tag)
-            numberOnScreen = Double(tappedButtonsTextView.text!)!
+            numberOnScreen = Double(Double(tappedButtonsTextView.text!)!)
             isPerfromingOperation = false
         }
-        else {
+        else if sender.tag != performOperation.dot {
             tappedButtonsTextView.text += String(sender.tag)
+            print("textview number: \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text)!
+            print("previous number before operation \(numberOnScreen)")
+        }
+        else if sender.tag == performOperation.dot {
+            if tappedButtonsTextView.text.contains(".") { return }
+            tappedButtonsTextView.text += "."
+            print("textview number: \(tappedButtonsTextView.text!)")
+            numberOnScreen = Double(tappedButtonsTextView.text)!
+            print("previous number before operation \(numberOnScreen)")
+
         }
     }
     
     // MARK: - Operations Action
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
-        if tappedButtonsTextView.text != ""{ previousNumber = Double(tappedButtonsTextView.text)! }
+        if tappedButtonsTextView.text != "" {
+            previousNumber = Double(Double(tappedButtonsTextView.text!)!)
+            print("first previous number: \(previousNumber)\n")
+        }
+        
         if  tappedButtonsTextView.text != "" && // textview not empty
-        sender.tag != performOperation.clearScreen &&
-        sender.tag != performOperation.result {
+            sender.tag != performOperation.clearScreen &&
+        sender.tag != performOperation.result && sender.tag != performOperation.percentage {
             
-            if sender.tag == performOperation.percentage { tappedButtonsTextView.text += "%" }
             if sender.tag == performOperation.divide { tappedButtonsTextView.text += "/" }
             if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "X" }
             if sender.tag == performOperation.subtract { tappedButtonsTextView.text += "-" }
@@ -68,7 +81,12 @@ class ViewController: UIViewController {
             isPerfromingOperation = true
         }
             
-        else if sender.tag == performOperation.result {
+            if sender.tag == performOperation.result {
+            
+            tappedButtonsTextView.text = ""
+            print("number on scree: \(numberOnScreen)\n")
+            print("Previous value: \(previousNumber)")
+            
             if operation == performOperation.percentage { calculatedAnswerTextView.text = String(previousNumber / 100) }
             else if operation == performOperation.divide { calculatedAnswerTextView.text = String(previousNumber / numberOnScreen) }
             else if operation == performOperation.multiply { calculatedAnswerTextView.text = String(previousNumber * numberOnScreen) }
@@ -76,11 +94,11 @@ class ViewController: UIViewController {
             else if operation == performOperation.add { calculatedAnswerTextView.text = String(previousNumber + numberOnScreen) }
         }
             
-        else if sender.tag == performOperation.clearScreen {
+            if sender.tag == performOperation.clearScreen {
             calculatedAnswerTextView.text = ""
             tappedButtonsTextView.text = ""
-            numberOnScreen = 0.0
-            previousNumber = 0.0
+            numberOnScreen = 0
+            previousNumber = 0
             operation = 0
         }
         else { return }
@@ -93,7 +111,7 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tappedButtonsTextView.text = ""
-        calculatedAnswerTextView.text = ""
+        calculatedAnswerTextView.text = "0"
         
     }
     // TODO: - LightMode
