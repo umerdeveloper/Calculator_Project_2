@@ -10,6 +10,7 @@ class ViewController: UIViewController {
     let performOperation = Operation()
     
     // MARK: - UI Components
+    #warning("set textview limit")
     @IBOutlet weak var tappedButtonsTextView: UITextView!
     @IBOutlet weak var calculatedAnswerTextView: UITextView!
     @IBOutlet var allButtons: [UIButton]!
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Numbers Action
-    @IBAction func numbersTapped(_ sender: UIButton) {
+    @IBAction func numbersButtonTapped(_ sender: UIButton) {
         
         // TODO: - Check Typing or Not
         if isPerfromingOperation {
@@ -79,7 +80,7 @@ class ViewController: UIViewController {
             
         // TODO: - Handle -ve value (-) add
         else if sender.tag == performOperation.setNagative {
-            if tappedButtonsTextView.text.contains("-") { return }
+            if tappedButtonsTextView.text.contains("-") || tappedButtonsTextView.text == empty { return }
             var negativeSign = "-"
             #warning("work on positive sign")
             // add to the start of textView
@@ -90,7 +91,11 @@ class ViewController: UIViewController {
     }
     // MARK: - Result Logic
     #warning("work on result")
+    #warning("if textview last digit is . return")
     @IBAction func resultButtonTapped(_ sender: UIButton) {
+        if tappedButtonsTextView.text == empty { return }
+        
+        
         
         
     }
@@ -99,38 +104,59 @@ class ViewController: UIViewController {
     
     // MARK: - Operations Action
     @IBAction func operationsButtonsTapped(_ sender: UIButton) {
-        #warning("if textview last digit is . return")
-        if tappedButtonsTextView.text != "" {
-            previousNumber = Double(Double(tappedButtonsTextView.text!)!)
+        // + - x ÷
+        if tappedButtonsTextView.text == empty { return }
+        let text = tappedButtonsTextView.text!
+        
+        if sender.tag == performOperation.divide {
+            if  inLastNotDigit(text) { return }
+            else { tappedButtonsTextView.text += "÷" }
+            }
+        
+        if sender.tag == performOperation.multiply {
+            if  inLastNotDigit(text) { return }
+            else { tappedButtonsTextView.text += "x" }
         }
         
-        if  tappedButtonsTextView.text != "" && // textview not empty
-            sender.tag != performOperation.clearScreen &&
-        sender.tag != performOperation.result && sender.tag != performOperation.percentage {
-            
-            if sender.tag == performOperation.divide { tappedButtonsTextView.text += "÷" }
-            if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "x" }
-            if sender.tag == performOperation.subtract { tappedButtonsTextView.text += "-" }
-            if sender.tag == performOperation.add { tappedButtonsTextView.text += "+" }
-            
-            operation = sender.tag
-            isPerfromingOperation = true
+        if sender.tag == performOperation.add {
+            if  inLastNotDigit(text) { return }
+            else { tappedButtonsTextView.text += "+" }
         }
-            
-//            if sender.tag == performOperation.result {
+        
+        if sender.tag == performOperation.subtract {
+            if  inLastNotDigit(text) { return }
+            else { tappedButtonsTextView.text += "-" }
+        }
+        
+//        if tappedButtonsTextView.text != "" {
+//            previousNumber = Double(Double(tappedButtonsTextView.text!)!)
+//        }
 //
-//            tappedButtonsTextView.text = ""
-//            print("number on scree: \(numberOnScreen)\n")
-//            print("Previous value: \(previousNumber)")
+//        if  tappedButtonsTextView.text != empty {
+//
+//            if sender.tag == performOperation.divide { tappedButtonsTextView.text += "÷" }
+//            if sender.tag == performOperation.multiply { tappedButtonsTextView.text += "x" }
+//            if sender.tag == performOperation.subtract { tappedButtonsTextView.text += "-" }
+//            if sender.tag == performOperation.add { tappedButtonsTextView.text += "+" }
+//
+//            operation = sender.tag
+//            isPerfromingOperation = true
+//        }
 //
 //            if operation == performOperation.percentage { calculatedAnswerTextView.text = String(previousNumber / 100) }
 //            else if operation == performOperation.divide { calculatedAnswerTextView.text = String(previousNumber / numberOnScreen) }
 //            else if operation == performOperation.multiply { calculatedAnswerTextView.text = String(previousNumber * numberOnScreen) }
 //            else if operation == performOperation.subtract { calculatedAnswerTextView.text = String(previousNumber - numberOnScreen) }
 //            else if operation == performOperation.add { calculatedAnswerTextView.text = String(previousNumber + numberOnScreen) }
-//        }
             
-            
+    }
+    
+    func inLastNotDigit(_ text: String) -> Bool {
+        if  text.last == "÷" ||
+        text.last == "-" ||
+        text.last == "+" ||
+        text.last == "x" { return true }
+        else { return false }
     }
     
     // MARK: - Find Percentage
