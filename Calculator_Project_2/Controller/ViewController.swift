@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         if isPerfromingOperation {
             #warning("append if want to see list of all buttons 2+2x3 etc")
             
-            tappedButtonsTextView.text = String(sender.tag)
+            tappedButtonsTextView.text += String(sender.tag)
             numberOnScreen = Double(tappedButtonsTextView.text!)!
             isPerfromingOperation = false
         }
@@ -159,8 +159,6 @@ class ViewController: UIViewController {
         }
         else if text.last == "." { return }
         // + - x ÷
-        
-        else if tappedButtonsTextView.text == empty { return }
         else if tappedButtonsTextView.text != empty && text.last == "." { return }
         
         else if sender.tag == performOperation.divide {
