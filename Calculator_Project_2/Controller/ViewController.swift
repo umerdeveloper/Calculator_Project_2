@@ -7,7 +7,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let performOperation = Operation()
+    // MARK: - StatusBar Style
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if isDarkMode { return .lightContent }
+        else { return .default }
+    }
     
     // MARK: - UI Components
     @IBOutlet weak var tappedButtonsTextView: UITextView!
@@ -15,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var allButtons: [UIButton]!
     
     // MARK: - Logic Supporting Properties
+    let performOperation = Operation()
     var numberOnScreen: Double = 0
     var previousNumber: Double = 0
     var operation: Int = 0
@@ -31,12 +36,15 @@ class ViewController: UIViewController {
 
     //MARK: - App Appearance
     @IBAction func appearanceButtonTapped(_ sender: UIButton) {
+        
         isDarkMode = !isDarkMode
         if !isDarkMode {
+            setNeedsStatusBarAppearanceUpdate()
             sender.setImage(whiteAppearanceMoonIcon, for: .normal)
             colorsForLightMode()
         }
         else if isDarkMode {
+            setNeedsStatusBarAppearanceUpdate()
             sender.setImage(darkAppearanceSunIcon, for: .normal)
             colorsForDarkMode()
         }
