@@ -48,20 +48,15 @@ class ViewController: UIViewController {
         // TODO: - Check Typing or Not
         if isPerfromingOperation {
             #warning("append if want to see list of all buttons 2+2x3 etc")
-            print("textView TEXT: \(tappedButtonsTextView.text!)")
-            print("operation perfroming tag: \(sender.tag)")
+            
             tappedButtonsTextView.text = String(sender.tag)
-            print("operation performing: \(tappedButtonsTextView.text!)")
             numberOnScreen = Double(tappedButtonsTextView.text!)!
-            print("number on screen: \(numberOnScreen)")
             isPerfromingOperation = false
         }
             
         // TODO: - Handle dot(.) and Zero
         else if sender.tag != performOperation.dot && sender.tag != 0 {
-            print(tappedButtonsTextView.text!)
             tappedButtonsTextView.text += String(sender.tag)
-            print(tappedButtonsTextView.text!)
             numberOnScreen = Double(tappedButtonsTextView.text)!
         }
             
@@ -95,27 +90,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func positiveNegativeButtonTapped(_ sender: UIButton) {
-        #warning("work on positive number")
         text = tappedButtonsTextView.text
         calculatedAnswerTextView.text = "0"
         
-        if text == empty {
-            tappedButtonsTextView.text = "-"
-        }
-        else if text.contains("-") {
-            return
-        }
-        else if inLastNotDigit(text) {
-            return
-        }
+        if text == empty { tappedButtonsTextView.text = "-" }
+        else if text.contains("-") { return }
+        else if inLastNotDigit(text) { return }
         else {
             negativeSign = "-"
             negativeSign += tappedButtonsTextView.text
             tappedButtonsTextView.text = negativeSign
             previousNumber = Double(tappedButtonsTextView.text!)!
-            print("Previous number where - before: \(previousNumber)")
         }
-        
     }
     
     // MARK: - Result Logic
@@ -129,8 +115,6 @@ class ViewController: UIViewController {
             if operation == performOperation.add {
                 operatorResult = previousNumber + numberOnScreen
                 calculatedAnswerTextView.text = String(operatorResult)
-                // testing
-                //previousNumber = Double(calculatedAnswerTextView.text)!
             }
             if operation == performOperation.divide {
                 if numberOnScreen == 0 { calculatedAnswerTextView.text = "Invalid" }
@@ -191,7 +175,6 @@ class ViewController: UIViewController {
             else { tappedButtonsTextView.text += "-" }
         }
         
-        // perform maths
         operation = sender.tag
         isPerfromingOperation = true
     }
@@ -208,13 +191,11 @@ class ViewController: UIViewController {
     
     @IBAction func percentageButtonTapped(_ sender: UIButton) {
         calculatedAnswerTextView.text = "0"
-        #warning("work on if operator in start")
         text = tappedButtonsTextView.text!
         
         if text.first == "-" {
            var value = Double(tappedButtonsTextView.text)!
             value =  value / 100
-            print(value)
             calculatedAnswerTextView.text = String(value)
         }
         
@@ -241,7 +222,6 @@ class ViewController: UIViewController {
         numberOnScreen = 0
         previousNumber = 0
         operation = 0
-        //negativeSign = empty
     }
 }
 
@@ -258,7 +238,7 @@ extension ViewController {
     // TODO: - LightMode
     func colorsForLightMode() {
         
-        UIApplication.shared.statusBarStyle = .default
+        //UIApplication.shared.statusBarStyle = .default
         view.backgroundColor = .white
         
         calculatedAnswerTextView.textColor = UIColor(named: "output_text_color")
@@ -295,7 +275,7 @@ extension ViewController {
     // TODO: - DarkMode
     func colorsForDarkMode() {
         
-        UIApplication.shared.statusBarStyle = .lightContent
+        //UIApplication.shared.statusBarStyle = .lightContent
         view.backgroundColor = .black
         
         calculatedAnswerTextView.backgroundColor = .black
