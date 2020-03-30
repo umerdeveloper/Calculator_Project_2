@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     var text: String = ""
     var negativeSign: String = "-"
     var operatorResult: Double = 0.0
+    var data: String = ""
     
     // MARK: - UI Supporting Properties
     var isDarkMode: Bool = false
@@ -122,7 +123,8 @@ class ViewController: UIViewController {
             
             if operation == performOperation.add {
                 operatorResult = previousNumber + numberOnScreen
-                calculatedAnswerTextView.text = String(operatorResult)
+                data = String(operatorResult)
+                isItDecimal(data)
             }
             if operation == performOperation.divide {
                 if numberOnScreen == 0 { calculatedAnswerTextView.text = "Invalid" }
@@ -313,6 +315,24 @@ extension ViewController {
                     button.backgroundColor = .white
                     button.setTitleColor(.black, for: .normal)
             }
+        }
+    }
+    
+    func isItDecimal(_ data: String) -> Void {
+        print(data)
+        var letters = [String]()
+            letters = data.map{ String($0) }
+        print(letters)
+        let len = letters.count
+        if letters.last == "0" && letters[len-2] == "." {
+            letters.remove(at: len-1)
+            letters.removeLast()
+            print(letters)
+            let str = letters.joined()
+            calculatedAnswerTextView.text = str
+        }
+        else {
+            calculatedAnswerTextView.text = data
         }
     }
 }
