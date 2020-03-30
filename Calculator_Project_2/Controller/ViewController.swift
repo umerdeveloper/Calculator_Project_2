@@ -130,16 +130,20 @@ class ViewController: UIViewController {
                 if numberOnScreen == 0 { calculatedAnswerTextView.text = "Invalid" }
                 else {
                     operatorResult = previousNumber / numberOnScreen
-                    calculatedAnswerTextView.text = String(operatorResult) }
+                    data = String(operatorResult)
+                    isItDecimal(data)
+                }
                 
             }
             if operation == performOperation.multiply {
                 operatorResult = previousNumber * numberOnScreen
-                calculatedAnswerTextView.text = String(operatorResult)
+                data = String(operatorResult)
+                isItDecimal(data)
             }
             if operation == performOperation.subtract {
                 operatorResult = previousNumber - numberOnScreen
-                calculatedAnswerTextView.text = String(operatorResult)
+                data = String(operatorResult)
+                isItDecimal(data)
             }
         }
         tappedButtonsTextView.text = empty
