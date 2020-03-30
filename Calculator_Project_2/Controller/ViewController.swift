@@ -326,12 +326,10 @@ extension ViewController {
         print(data)
         var letters = [String]()
             letters = data.map{ String($0) }
-        print(letters)
         let len = letters.count
         if letters.last == "0" && letters[len-2] == "." {
             letters.remove(at: len-1)
             letters.removeLast()
-            print(letters)
             let str = letters.joined()
             calculatedAnswerTextView.text = str
         }
