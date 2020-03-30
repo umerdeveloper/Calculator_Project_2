@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         if isPerfromingOperation {
             #warning("append if want to see list of all buttons 2+2x3 etc")
             
-            tappedButtonsTextView.text += String(sender.tag)
+            tappedButtonsTextView.text = String(sender.tag)
             numberOnScreen = Double(tappedButtonsTextView.text!)!
             isPerfromingOperation = false
         }
